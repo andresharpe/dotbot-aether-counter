@@ -1,33 +1,40 @@
 @{
     # Script module or binary module file associated with this manifest.
-    RootModule = 'Printer.psm1'
+    RootModule = 'DotBot.Aether.Counter.psm1'
 
     # Version number of this module.
     ModuleVersion = '1.0.0'
 
     # Supported PSEditions
-    CompatiblePSEditions = @('Desktop', 'Core')
+    CompatiblePSEditions = @('Core')
 
     # ID used to uniquely identify this module
     GUID = 'e8f7a6b5-c4d3-4e5f-a1b2-9c8d7e6f5a4b'
 
     # Author of this module
-    Author = 'Printer PowerShell Module Contributors'
+    Author = 'Andre'
 
     # Company or vendor of this module
-    CompanyName = 'Community'
+    CompanyName = 'DotBot'
 
     # Copyright statement for this module
-    Copyright = '(c) 2026 Printer PowerShell Module Contributors. All rights reserved.'
+    Copyright = '(c) 2026 Andre. All rights reserved.'
 
     # Description of the functionality provided by this module
-    Description = 'PowerShell module for controlling text printers via TCP/IP. Provides network discovery, text printing, formatting, and receipt generation for Epson and compatible printers.'
+    Description = 'DotBot Aether Counter Conduit — ESC/POS text printer control via TCP/IP. Part of the dotbot-aether conduit plugin collection.'
 
     # Minimum version of the PowerShell engine required by this module
-    PowerShellVersion = '5.1'
+    PowerShellVersion = '7.0'
 
     # Functions to export from this module, for best performance, do not use wildcards and do not delete the entry, use an empty array if there are no functions to export.
     FunctionsToExport = @(
+        # Aether Interface Contract (6)
+        'Initialize-AetherCounter'
+        'Find-AetherCounter'
+        'Connect-AetherCounter'
+        'Disconnect-AetherCounter'
+        'Test-AetherCounter'
+        'Invoke-AetherCounterEvent'
         # Connection & Discovery (5)
         'Find-Printer'
         'Connect-Printer'
@@ -70,13 +77,13 @@
     PrivateData = @{
         PSData = @{
             # Tags applied to this module. These help with module discovery in online galleries.
-            Tags = @('ESC/POS', 'TextPrinter', 'Epson', 'Receipt', 'Printer', 'POS', 'TCP', 'Network', 'Hardware')
+            Tags = @('DotBot', 'Aether', 'Counter', 'ESC/POS', 'TextPrinter', 'Epson', 'Receipt', 'Printer', 'POS', 'TCP', 'Network', 'Hardware')
 
             # A URL to the license for this module.
-            LicenseUri = 'https://github.com/yourusername/TextPrinter/blob/master/LICENSE'
+            LicenseUri = 'https://github.com/andresharpe/dotbot-aether-counter/blob/main/LICENSE'
 
             # A URL to the main website for this project.
-            ProjectUri = 'https://github.com/yourusername/TextPrinter'
+            ProjectUri = 'https://github.com/andresharpe/dotbot-aether-counter'
 
             # ReleaseNotes of this module
             ReleaseNotes = @'

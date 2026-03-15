@@ -1,0 +1,20 @@
+{
+  "name": "counter",
+  "type": "counter",
+  "version": "1.0.0",
+  "module": "src/AetherCounter/AetherCounter.psd1",
+  "capabilities": ["print-text", "print-receipt", "two-color", "paper-cut", "buzzer", "font-selection", "horizontal-rule"],
+  "discovery": "lan",
+  "protocol": "tcp-escpos",
+  "platforms": ["windows", "linux", "macos"],
+  "upstream": {
+    "repo": "https://github.com/andresharpe/TextPrinter",
+    "module": "Printer"
+  },
+  "events": [
+    "task.completed",
+    "workflow.completed",
+    "reckoning.daily",
+    "reckoning.weekly"
+  ]
+}
