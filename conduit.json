@@ -2,19 +2,18 @@
   "name": "counter",
   "type": "counter",
   "version": "1.0.0",
-  "module": "src/AetherCounter/AetherCounter.psd1",
+  "description": "Physical record conduit — ESC/POS receipt printer integration",
+  "module": "src/DotBot.Aether.Counter/DotBot.Aether.Counter.psd1",
+  "repo": "https://github.com/andresharpe/dotbot-aether-counter",
   "capabilities": ["print-text", "print-receipt", "two-color", "paper-cut", "buzzer", "font-selection", "horizontal-rule"],
   "discovery": "lan",
   "protocol": "tcp-escpos",
   "platforms": ["windows", "linux", "macos"],
-  "upstream": {
-    "repo": "https://github.com/andresharpe/TextPrinter",
-    "module": "Printer"
-  },
-  "events": [
-    "task.completed",
-    "workflow.completed",
-    "reckoning.daily",
-    "reckoning.weekly"
-  ]
+  "events": ["task.completed", "workflow.completed", "reckoning.daily", "reckoning.weekly"],
+  "settings": {
+    "reckonings": { "type": "array", "default": ["task", "workflow", "daily"] },
+    "characters_per_line": { "type": "integer", "default": 40 },
+    "buzzer_on_milestone": { "type": "boolean", "default": true },
+    "auto_reconnect": { "type": "boolean", "default": true }
+  }
 }

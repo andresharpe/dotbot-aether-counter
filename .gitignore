@@ -1,53 +1,49 @@
-# PowerShell Module specific
-*.psm1.bak
-*.psd1.bak
-*.ps1.bak
-
-# Test results
+# PowerShell
+*.pdb
 TestResults/
-*.trx
+coverage*.xml
+coverage*.json
+coverage*.info
 *.coverage
-coverage.xml
+*.coveragexml
 
-# Build artifacts
-dist/
-build/
-*.zip
+# .NET build
+[Bb]in/
+[Oo]bj/
+publish/
+*.nupkg
+*.snupkg
 
-# IDE and Editor files
+# Node
+node_modules/
+*.tgz
+
+# IDE / Editor
 .vscode/
-.vs/
 .idea/
+.vs/
+.claude/
+*.suo
+*.user
+*.code-workspace
 *.swp
 *.swo
 *~
 
-# OS files
+# OS
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# Environment / Secrets
+.env
+.env.local
+secrets.json
 
 # Logs
 *.log
 logs/
 
-# Temporary files
-temp/
-tmp/
+# Temp
 *.tmp
-
-# Claude Code
-.claude/
-
-# Environment files
-.env
-.env.local
-*.local
-
-# Pester code coverage
-coverage/
-*.coverage.xml
-
-# Documentation build
-docs/_build/
-docs/.doctrees/
+temp/
