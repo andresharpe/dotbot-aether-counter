@@ -1,6 +1,6 @@
 # DotBot.Aether.Counter
 
-Aether **Counter** conduit — ESC/POS receipt printer integration for [dotbot](https://github.com/andresharpe/dotbot-v3). Part of the [dotbot-aether](https://github.com/andresharpe/dotbot-aether) conduit plugin collection.
+Aether **Counter** conduit — ESC/POS receipt printer integration for [dotbot](https://github.com/andresharpe/dotbot). Part of the [dotbot-aether](https://github.com/andresharpe/dotbot-aether) conduit plugin collection.
 
 [![PowerShell 7.0+](https://img.shields.io/badge/PowerShell-7.0%2B-blue.svg)](https://github.com/PowerShell/PowerShell)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
